@@ -8,6 +8,11 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: recursive
+        # use SSH private key to be able to checkout git submodule containing AOC inputs
+        # Ref: https://github.com/orgs/community/discussions/50130
+        with:
+            repository: iron-island/adventofcode_inputs_submodule
+            ssh-key: ${{ secrets.ACTIONS_SSH_PRIVATE_KEY }}
 
       - name: Install iverilog
         shell: bash
