@@ -1,0 +1,3 @@
+[submodule "src/adventofcode_inputs_submodule"]
+	path = src/adventofcode_inputs_submodule
+	url = git@github.com:iron-island/adventofcode_inputs_submodule
